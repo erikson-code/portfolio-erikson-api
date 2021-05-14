@@ -3,7 +3,6 @@ const express = require('express')
 const server = express()
 const { connect } = require('./db')
 const bodyParser = require('body-parser')
-
 const portfolioRouter = require('./routes/portfolios')
 
 const runServer = async () => {
@@ -14,7 +13,7 @@ const runServer = async () => {
     server.use(bodyParser.json())
     server.use('/api/portfolios', require('./routes/portfolios'))
 
-    const PORT = (parseInt(process.env.port,10) || 3001)
+    const PORT = process.env.PORT|| 3001
 
     server.listen(PORT, err => {
 
