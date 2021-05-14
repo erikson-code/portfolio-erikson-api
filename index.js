@@ -14,7 +14,7 @@ const runServer = async () => {
     server.use(bodyParser.json())
     server.use('/api/portfolios', require('./routes/portfolios'))
 
-    const PORT = (parseInt(process.env.port) || 3001)
+    const PORT = (parseInt(process.env.port,10) || 3001)
 
     server.listen(PORT, err => {
 
