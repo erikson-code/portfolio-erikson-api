@@ -16,12 +16,12 @@ const runServer = async () => {
 
     const PORT = (parseInt(process.env.PORT) || 3001)
 
-    server.listen(PORT, err => {
+    // server.listen(PORT, err => {
 
-        if (err) console.error(err)
-        console.log('Listen in ' + PORT)
+    //     if (err) console.error(err)
+    //     console.log('Listen in ' + PORT)
 
-    })
+    // })
 }
 
 runServer()
