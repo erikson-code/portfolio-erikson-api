@@ -12,10 +12,10 @@ exports.checkJwt = jwt({
         cache: true,
         rateLimit: true,
         jwksRequestsPerMinute: 10,
-        jwksUri: 'https://erikson.jp.auth0.com/.well-known/jwks.json'
+        jwksUri: process.env.AUTH0_CLIENT
     }),
-    audience: 'https://erikson.jp.auth0.com/api/v2/',
-    issuer: 'https://erikson.jp.auth0.com/',
+    audience: process.env.AUTH0_AUDIENCE,
+    issuer: process.env.AUTH0_DOMAIN,
     algorithms: ['RS256']
 
 })
