@@ -14,14 +14,14 @@ const runServer = async () => {
     server.use(bodyParser.json())
     server.use('/api/portfolios', require('./routes/portfolios'))
 
-    const PORT = (parseInt(process.env.PORT) || 3001)
+    const PORT = (parseInt(process.env.port) || 3001)
 
-    // server.listen(PORT, err => {
+    server.listen(PORT, err => {
 
-    //     if (err) console.error(err)
-    //     console.log('Listen in ' + PORT)
+        if (err) console.error(err)
+        console.log('Listen in ' + PORT)
 
-    // })
+    })
 }
 
 runServer()
