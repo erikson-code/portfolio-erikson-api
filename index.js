@@ -9,7 +9,6 @@ const runServer = async () => {
 
     await connect()
 
-
     server.use(bodyParser.json())
     server.use('/api/portfolios', require('./routes/portfolios'))
 
